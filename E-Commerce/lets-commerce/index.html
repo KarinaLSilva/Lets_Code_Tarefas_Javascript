@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lets-commerce</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/nav/style-nav.css" />
+    <link
+      rel="stylesheet"
+      href="./css/container/visualizacao/visualizacao.css"
+    />
+    <link rel="stylesheet" href="./css/container/cadastro/cadastro.css" />
+    <link rel="stylesheet" href="./css/container/indicadores/indicadores.css" />
+    <link rel="stylesheet" href="./css/modal/modal.css" />
+    <script src="./scripts/lets-commerce/utilitarios.js" defer></script>
+    <script src="./scripts/modal/modal.js" defer></script>
+    <script src="./scripts/lets-commerce/manipula-elementos.js" defer></script>
+    <script src="./scripts/lets-commerce/produtos.js" defer></script>
+    <script src="./scripts/lets-commerce/carrinho.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Área do navbar -->
+    <nav class="nav-bar">
+      <h3 id="nav-titulo">Lets Commerce</h3>
+      <form class="form-busca">
+        <input
+          type="text"
+          id="inputBusca"
+          class="input-busca"
+          placeholder="Digite um valor para buscar"
+        />
+        <span class="material-icons busca"> search </span>
+      </form>
+      <ul id="nav-opcoes">
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Cadastro</a></li>
+        <li><a href="#">Suporte</a></li>
+        <li><a href="#">Cadastro de Produtos</a></li>
+        <li><a href="#" onclick="abrirModal('modal')">Carrinho</a></li>
+      </ul>
+    </nav>
+
+    <!-- Visualização de produtos -->
+    <div id="visualizacaoProdutos" class="visualizacao"></div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span
+          class="material-icons fechar-modal"
+          onclick="fecharModal('modal')"
+        >
+          close
+        </span>
+        <div class="modal-header">
+          <h3>Carrinho</h3>
+        </div>
+
+        <div class="modal-body">
+          <div id="visualizacaoModal" class="visualizacao"></div>
+        </div>
+
+        <div class="modal-footer">
+          <h3 id="totalCarrinho"></h3>
+          <button type="button" onclick="finalizaPedido()">
+            Finalizar Pedido
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

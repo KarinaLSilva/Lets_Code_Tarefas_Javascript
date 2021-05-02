@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Controle Financeiro Pessoal</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/nav/style-nav.css" />
+    <link
+      rel="stylesheet"
+      href="./css/container/visualizacao/visualizacao.css"
+    />
+    <link rel="stylesheet" href="./css/container/cadastro/cadastro.css" />
+    <link rel="stylesheet" href="./css/container/indicadores/indicadores.css" />
+    <script src="./utilitarios.js" defer></script>
+    <script src="./sistema-controle-financeiro.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Área do navbar -->
+    <nav class="nav-bar">
+      <h3 id="nav-titulo">Sistema de Controle Financeiro Pessoal</h3>
+      <label for="tipoBusca">
+        Busca por:
+        <select id="tipoBusca">
+          <option value="id">Id</option>
+          <option value="descricoes">Descrição</option>
+          <option value="tiposdeconta">Tipo de Conta</option>
+          <option value="categorias">Categoria</option>
+        </select>
+      </label>
+      <form class="form-busca">
+        <input
+          type="text"
+          id="inputBusca"
+          class="input-busca"
+          placeholder="Digite um valor para buscar"
+        />
+        <span class="material-icons busca"> search </span>
+      </form>
+      <ul id="nav-opcoes">
+        <li><a href="">Login</a></li>
+        <li><a href="">Cadastro</a></li>
+        <li><a href="">Suporte</a></li>
+      </ul>
+    </nav>
+
+    <!-- Cadastro de alunos -->
+    <div id="cadastro">
+      <h3>Cadastro de contas</h3>
+      <form id="form-cadastro" class="form-cadastro">
+        <div class="form-field">
+          <label for="nomeDescricao" class="label-input">Descrição:</label>
+          <input
+            id="nomeDescricao"
+            type="text"
+            placeholder="Digite a descrição"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="valorConta" class="label-input">Valor da conta:</label>
+          <input
+            id="valorConta"
+            type="number"
+            placeholder="Digite o valor da conta"
+          />
+        </div>
+        <div class="form-field">
+          <label for="tipoConta" class="label-input"
+            >Selecione o tipo da conta::</label
+          >
+          <select id="tipoConta">
+            <option value="Receita">Receita</option>
+            <option value="Despesa">Despesa</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="categoria" class="label-input">Categoria:</label>
+          <select id="categoria">
+            <option value="Lazer">Lazer</option>
+            <option value="Trabalho">Trabalho</option>
+            <option value="Entretenimento">Entretenimento</option>
+            <option value="Pagamento Contas">Pagamento de Contas</option>
+            <option value="Investimentos">Investimentos</option>
+          </select>
+        </div>
+        <div class="form-acoes">
+          <button id="btnSalvar" class="cadastrarProduto" type="button">
+            Salvar
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Indicadores -->
+    <h3 class="titulo">Indicadores:</h3>
+    <div id="indicadores">
+      <h3 id="saldoTotal">Saldo total: 0</h3>
+      <h3 id="totalReceitas">Total de Receitas: 0</h3>
+      <h3 id="mediaReceitas">Média de Receitas: 0</h3>
+      <h3 id="totalDespesas">Total de Despesas: 0</h3>
+      <h3 id="mediaDespesas">Média de Despesas: 0</h3>
+    </div>
+
+    <!-- Visualização de alunos -->
+    <h3 class="titulo">Contas:</h3>
+    <div id="visualizacao"></div>
+  </body>
+</html>

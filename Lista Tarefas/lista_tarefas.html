@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ex</title>
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <label for="adicionaTarefa">Add tarefa a fazer:</label>
+        <input type="text" id="adicionaTarefa" />
+        <button
+          type="button"
+          id="addTarefa"
+          onclick="adicionarTarefa(adicionaTarefa.value)"
+        >
+          Add
+        </button>
+        </br>
+        <form action="">
+            <ul id="listaTarefasFazer"></ul>
+        </form>
+        </br>
+
+        <label for="adicionaTarefaConcluida">Add tarefa concluída:</label>
+        <input type="text" id="adicionaTarefaConcluida" />
+        <button
+          type="button"
+          id="addTarefaConcluida"
+          onclick="adicionarTarefaConcluida(adicionaTarefaConcluida.value)"
+        >
+          Add
+        </button>
+        </br>
+        </br>
+        <button type="button" id="buscaTarefas" onclick="buscarTarefas()">
+          Buscar Tarefas
+        </button>
+
+        <form action="">
+            <ul id="listaTarefas"></ul>
+        </form>
+        </br>
+        </br>
+
+        <label for="removeTarefa">Remover</label>
+        <input type="text" id="removeTarefa">
+        <button
+        type="button"
+        id="remTarefa"
+        onclick="removerTarefa(removeTarefa.value)"
+        >
+        Remover
+        </button>
+        </br>
+        </br>
+
+        <label for="concluiTarefa">Concluir tarefa</label>
+        <input type="text" id="concluiTarefa">
+        <button type="button" onclick="concluirTarefa(concluiTarefa.value)">Concluir</button>
+
+    </form>
+
+    </main>
+
+    <script src="lista_tarefas.js"></script>
+  </body>
+</html>

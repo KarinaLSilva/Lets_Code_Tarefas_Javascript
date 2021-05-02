@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Pessoas</title>
+    <script src="controle-pessoas.js" defer></script>
+  </head>
+  <body>
+    <form>
+      <div class="form-field">
+        <label for="idade">Digite a idade:</label>
+        <input type="number" id="idade" />
+      </div>
+      <br />
+      <div class="form-field">
+        <label for="peso">Digite o peso(kg):</label>
+        <input type="number" id="peso" />
+      </div>
+      <br />
+      <div class="form-field">
+        <label for="sexo">Selecione o sexo:</label>
+        <select id="sexo">
+          <option value="M">Masculino</option>
+          <option value="F">Feminino</option>
+        </select>
+      </div>
+      <br />
+      <button
+        type="button"
+        onclick="adicionaPessoas(idade.value, peso.value, sexo.value)"
+      >
+        Adicionar
+      </button>
+    </form>
+    <div>
+      <h4 id="mediaIdadeHomens">Média da idade dos homens:</h4>
+      <h4 id="totalHomens">Total de homens:</h4>
+      <h4 id="mediaIdadeMulheres">Média da idade das mulheres:</h4>
+      <h4 id="totalMulheres">Total de mulheres:</h4>
+      <ul id="listaPessoas"></ul>
+    </div>
+  </body>
+</html>
